@@ -3,7 +3,7 @@ name: PChome Signin
 on:
   schedule:
     # 設定 UTC 時間 12:00，剛好等於台灣時間晚上 8:00
-    - cron: '0 12 * * *'
+    - cron: '0 00 * * *'
   workflow_dispatch:
 
 jobs:
