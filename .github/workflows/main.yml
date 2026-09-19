@@ -1,0 +1,27 @@
+name: PChome Signin
+
+on:
+  schedule:
+    # 設定 UTC 時間 12:00，剛好等於台灣時間晚上 8:00
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install requests
+
+      - name: Run script
+        run: |
+          python main.py
