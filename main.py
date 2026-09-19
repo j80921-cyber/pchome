@@ -142,4 +142,4 @@ for i, cookie in enumerate(cookies, start=1):
         pp_balance_str = "待生效:0".ljust(10)
 
     print(
-        f"{account_str}{message_str}{rest_amt_str}{exp_amt_str}{exp_date_str}{pp_balance_str}"  
+        f"{account_str}{message_str}{rest_amt_str}{exp_amt_str}{exp_date_str}{pp_balance_str}") 
